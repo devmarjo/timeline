@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <div class="q-pa-lg">
     <q-timeline color="secondary">
@@ -37,3 +38,5 @@ export default {
   },
 };
 </script>
+=======
+>>>>>>> 22dc5b46d321f936583e13acd965b27ee7cd983d

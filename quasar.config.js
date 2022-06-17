@@ -23,7 +23,14 @@ module.exports = configure(function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-webpack/boot-files
+<<<<<<< HEAD
     boot: [],
+=======
+    boot: [
+
+
+    ],
+>>>>>>> 22dc5b46d321f936583e13acd965b27ee7cd983d
 
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-css
     css: ["app.scss"],
@@ -66,11 +73,19 @@ module.exports = configure(function (ctx) {
       // https://v2.quasar.dev/quasar-cli-webpack/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
 
+<<<<<<< HEAD
       chainWebpack(chain) {
         chain
           .plugin("eslint-webpack-plugin")
           .use(ESLintPlugin, [{ extensions: ["js", "vue"] }]);
       },
+=======
+      chainWebpack (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
+      }
+
+>>>>>>> 22dc5b46d321f936583e13acd965b27ee7cd983d
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-devServer
@@ -117,11 +132,20 @@ module.exports = configure(function (ctx) {
       maxAge: 1000 * 60 * 60 * 24 * 30,
       // Tell browser when a file from the server should expire from cache (in ms)
 
+<<<<<<< HEAD
       chainWebpackWebserver(chain) {
         chain
           .plugin("eslint-webpack-plugin")
           .use(ESLintPlugin, [{ extensions: ["js"] }]);
       },
+=======
+
+      chainWebpackWebserver (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+      },
+
+>>>>>>> 22dc5b46d321f936583e13acd965b27ee7cd983d
 
       middlewares: [
         ctx.prod ? "compression" : "",
@@ -137,11 +161,19 @@ module.exports = configure(function (ctx) {
       // for the custom service worker ONLY (/src-pwa/custom-service-worker.[js|ts])
       // if using workbox in InjectManifest mode
 
+<<<<<<< HEAD
       chainWebpackCustomSW(chain) {
         chain
           .plugin("eslint-webpack-plugin")
           .use(ESLintPlugin, [{ extensions: ["js"] }]);
       },
+=======
+      chainWebpackCustomSW (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+      },
+
+>>>>>>> 22dc5b46d321f936583e13acd965b27ee7cd983d
 
       manifest: {
         name: `Quasar App`,
@@ -214,6 +246,7 @@ module.exports = configure(function (ctx) {
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
 
+<<<<<<< HEAD
       chainWebpackMain(chain) {
         chain
           .plugin("eslint-webpack-plugin")
@@ -227,4 +260,20 @@ module.exports = configure(function (ctx) {
       },
     },
   };
+=======
+      chainWebpackMain (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+      },
+
+
+
+      chainWebpackPreload (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+      },
+
+    }
+  }
+>>>>>>> 22dc5b46d321f936583e13acd965b27ee7cd983d
 });
